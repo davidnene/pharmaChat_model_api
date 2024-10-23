@@ -12,8 +12,6 @@ load_dotenv()
 # Load query engine
 query_engine = index.as_query_engine()
 
-# Load query engine
-query_engine = index.as_query_engine()
 
 
 class QueryRequest(BaseModel):
