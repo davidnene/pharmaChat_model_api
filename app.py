@@ -10,9 +10,8 @@ app = FastAPI()
 
 load_dotenv()
 # Load query engine
-query_engine = index.as_query_engine()
-
-
+db = index()
+query_engine = db.as_query_engine()
 
 class QueryRequest(BaseModel):
     question: str
