@@ -7,12 +7,12 @@ from transformers import AutoTokenizer
 
 offload_dir ="/model_offload"
 
-# Load model from huggingface
-config = PeftConfig.from_pretrained("davidnene/meditron-pharmachat-ft")
-base_model = AutoModelForCausalLM.from_pretrained("epfl-llm/meditron-7b")
-model = PeftModel.from_pretrained(base_model, "davidnene/meditron-pharmachat-ft")
-tokenizer = AutoTokenizer.from_pretrained("epfl-llm/meditron-7b")
-print('Model loaded')
+# # Load model from huggingface
+# config = PeftConfig.from_pretrained("davidnene/meditron-pharmachat-ft")
+# base_model = AutoModelForCausalLM.from_pretrained("epfl-llm/meditron-7b")
+# model = PeftModel.from_pretrained(base_model, "davidnene/meditron-pharmachat-ft")
+# tokenizer = AutoTokenizer.from_pretrained("epfl-llm/meditron-7b")
+# print('Model loaded')
 # Wrap the fine-tuned model in HuggingFaceLLM
 llm = HuggingFaceLLM(
     context_window=2048,
