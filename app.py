@@ -32,7 +32,7 @@ async def ask_question(request: QueryRequest):
         "chat_history": request.chat_history + [(request.question, result)]
     }
     # stream db
-    query_engine_stream = index.as_query_engine(streaming=True)
-    response_stream = query_engine_stream.query(request.question)
-    response_stream.print_response_stream()
+    # query_engine_stream = index.as_query_engine(streaming=True)
+    # response_stream = query_engine_stream.query(request.question)
+    # response_stream.print_response_stream()
     return response
