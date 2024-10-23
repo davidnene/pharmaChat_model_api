@@ -18,6 +18,10 @@ class QueryRequest(BaseModel):
     chat_history: List[Tuple[str, str]] = []
 
 # Define the POST endpoint
+@app.get('/')
+async def test():
+    return '<h1>This service is live!</h1>'
+
 @app.post("/ask-question")
 async def ask_question(request: QueryRequest):
     
